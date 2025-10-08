@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef/requiredResearchFacilities/li[.="MultiAnalyzer"]</xpath>
+        <value>
+            <li>HMC_Wall_Multi_Analyzer</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HMC_Wall_Multi_Analyzer"]/comps/li[@Class="CompProperties_Facility"]</xpath>
+        <value>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                    <ResearchSpeedFactor>0.10</ResearchSpeedFactor>
+                </statOffsets>
+                <maxSimultaneous>1</maxSimultaneous>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="HMC_Wall_Multi_Analyzer"]/comps/li[@Class="CompProperties_Power"]</xpath>
+        <value>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>false</shortCircuitInRain> 
+                <basePowerConsumption>200</basePowerConsumption>
+            </li>
+        </value>
+    </Operation>
+</Patch>
