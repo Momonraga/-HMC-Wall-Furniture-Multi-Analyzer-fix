@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef/requiredResearchFacilities/li[.=\"MultiAnalyzer\"]</xpath>
+        <value>
+            <li>HMC_Wall_Multi_Analyzer</li>
+        </value>
+    </Operation>
+
+</Patch>
